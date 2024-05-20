@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="es-ES">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Control de gastos</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/general-style.css">
+        <link rel="stylesheet" href="css/popup-style.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  
+    </head>
+    <body>
+
+        <!-- APP PRINCIPAL -->
+
+        <!-- Menu -->
+        <div class="main-screen" id="main-screen">
+            <nav class="main-nav">
+                <ul>
+                    <li class="nav-item" id="nav-item-extracto-btn"><span class="material-symbols-outlined">account_balance</span>Ver Extracto</li>
+                    <li class="nav-item" id="nav-item-ingresar-btn"><span class="material-symbols-outlined">savings</span>Cobro</li>
+                    <li class="nav-item" id="nav-item-retirar-btn"><span class="material-symbols-outlined">payments</span>Gasto</li>
+                </ul>
+            </nav>
+
+            <!-- Pantala Principal -->
+            <div class="main-main" id="main-main">
+
+                <!-- Panta de info -->
+                <div class="main-account-info" id="main-account-info">
+                    <h2>Informacion de la cuenta</h2><br><br>
+                    <p class="txt-account-info" id="txt-nombre-usuario">Nombre de Usuario:</p>
+                    <p class="txt-account-info" id="txt-info-cuenta">Numero de cuenta:</p>
+                    <p class="txt-account-info" id="txt-info-cuenta-tipo">Tipo de cuenta:</p>
+                    <h3 class="txt-account-saldo" id="txt-saldo"></h3>
+                </div>
+
+                <!-- Pantalla banco -->
+                <div class="main-account" id="main-account">
+                    <h2>Historial de operaciones</h2>
+                </div>
+
+                <!-- Pantalla ingreso -->
+                <div class="main-account-ingreso" id="main-account-ingreso">
+                    <h2>Cobro</h2>
+                    <label class="lbl-main-account-ingreso" for="txt-importe">Importe Ingreso</label>
+                    <input type="number" class="txt-input" name="txt-importe" id="txt-importe" placeholder="Importe" onkeypress="return valideKey(event);">
+                    <label class="lbl-main-account-ingreso" for="txt-concepto">Concepto</label>
+                    <input type="text" class="txt-input" name="txt-concepto" id="txt-concepto" placeholder="Concepto">
+                    <label class="lbl-main-account-ingreso" for="txt-fecha">Fecha</label>
+                    <input type="text" class="txt-input" name="txt-fecha" id="txt-fecha" placeholder="Fecha" disabled>
+                    <button class="btn-ingreso" id="btn-ingreso">Agregar</button>
+                </div>
+
+                <!-- Pantalla gasto -->
+                <div class="main-account-gasto" id="main-account-gasto">
+                    <h2>Gasto</h2>
+                    <label class="lbl-main-account-ingreso" for="txt-importe-gasto">Importe Gasto</label>
+                    <input type="number" class="txt-input" name="txt-importe-gasto" id="txt-importe-gasto" placeholder="Importe" onkeypress="return valideKey(event);">
+                    <label class="lbl-main-account-ingreso" for="txt-concepto-gasto">Concepto</label>
+                    <input type="text" class="txt-input" name="txt-concepto-gasto" id="txt-concepto-gasto" placeholder="Concepto">
+                    <label class="lbl-main-account-ingreso" for="txt-fecha-gasto">Fecha</label>
+                    <input type="text" class="txt-input" name="txt-fecha-gasto" id="txt-fecha-gasto" placeholder="Fecha" disabled>
+                    <button class="btn-gasto" id="btn-gasto">Agregar</button>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <!-- MODAL PARA INICIO DE SESION -->
+        <div class="popup-login" id="popup-login">
+            <h2>Bienvenido al Sistema</h2>
+            <form class="form-login" action="login.php" method="post">
+                <label for="form-txt-name">Usuario</label>
+                <input class="form-txt" type="text" name="form-txt-name" id="form-txt-name" placeholder="demo">
+                <label for="form-txt-pass">Password</label>
+                <input class="form-txt" type="password" name="form-txt-pass" id="form-txt-pass" placeholder="demo">
+                <small class="form-alert" id="form-alert">*La clave introducida no es válida</small>
+                <button class="form-btn" id="form-btn" type="submit">Acceder</button>
+            </form>
+        </div>
+        
+        <script src="script/script.js" async defer></script>
+    </body>
+</html>

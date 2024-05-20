@@ -1,0 +1,351 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma;
+}
+
+.main-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #003C43;
+}
+
+.main-nav {
+    width: 100%;
+    height: 10vh;
+    background-color: #003C43;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: inline-flex;
+}
+
+.nav-item {
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 1.3em;
+    color: #fafafa;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.nav-item-seleccionado,
+.nav-item:hover {
+    color: #fafafa;
+    background-color: #003C43;
+    border: 1px solid #fafafa;
+}
+
+.nav-item span {
+    padding-right: 10px;
+}
+
+.main-main {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    flex-direction: row;
+    background-color: #fafafa;
+}
+
+.main-account-ingreso {
+    display:none;
+}
+
+.main-account-gasto {
+    display: none;
+}
+
+.main-main h2 {
+    width: 100%;
+    color: #003C43;
+    font-size: 1.3em;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 200,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.material-symbols-outlined {
+    border: none;
+}
+
+.main-account-info {
+    width: 25%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-account-info h2 {
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
+    color: #003C43;
+    font-size: 1.3em;
+    font-weight: 400;
+}
+
+.txt-account-info {
+    margin-left: 20px;
+    padding: 5px;
+    color: #003C43;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.txt-account-saldo {
+    margin-left: 20px;
+    width: 100%;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.main-account-ingreso,
+.main-account-gasto,
+.main-account {
+    width: 75%;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-account {
+    overflow-y: scroll;
+}
+
+.main-account-ingreso h2,
+.main-account-gasto h2,
+.main-account h2 {
+    margin: 15px 0;
+}
+
+.item-extracto {
+    width: 50%;
+    padding: 15px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 1px solid #003C43;
+    border-radius: 10px;
+}
+
+.item-extracto:hover {
+    background-color: #003c4317;
+}
+
+.item-extracto-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+}
+
+.item-extracto span {
+    font-size: 40px;
+}
+
+.item-extracto-info {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.item-extracto-info h3 {
+    font-size: 20px;
+}
+
+.item-extracto-info p {
+    margin-top: 20px;
+}
+
+.btn-eliminar {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: #fafafa;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.btn-eliminar:hover {
+    border: 1px solid red;
+    background-color: rgba(255, 0, 0, 0.288);
+}
+
+.txt-input {
+    width: 50%;
+    margin: 5px auto;
+    padding: 10px;
+    border: none;
+    border-bottom: 1px solid #003C43;
+    outline: none;
+    background-color: #fafafa;
+    color: #003C43;
+    font-size: 1.3em;
+    transition: all .2s ease-in-out;
+}
+
+.lbl-main-account-ingreso {
+    width: 50%;
+    margin: 5px auto;
+    font-size: 1.3em;
+}
+
+.txt-input:focus,
+.txt-input:hover {
+    background-color: rgba(102, 255, 0, 0.164);
+}
+
+.btn-gasto,
+.btn-ingreso {
+    width: 200px;
+    height: 75px;
+    margin: 10px auto;
+    padding: 10px;
+    font-size: 1.3em;
+    background-color: #fafafa;
+    color: #003C43;
+    border: 1px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.btn-gasto:hover,
+.btn-ingreso:hover {
+    background-color: #003C43;
+    border: 1px solid transparent;
+    color: #fafafa;
+}
+
+
+/* configuracion para movil */
+
+@media screen and (max-width: 700px) {
+    
+    .main-nav {
+        width: 100%;
+        height: 30vh;
+        min-height: 30vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .main-nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-main {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .main-account-info {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        font-size: 14px;
+    }
+
+    .main-account-info h2 {
+        display: none;
+    }
+
+    .txt-account-saldo {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .txt-account-info {
+        display: none;
+    }
+
+    #txt-info-cuenta {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .main-account-gasto,
+    .main-account-ingreso,
+    .main-account {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .main-account-ingreso h2,
+    .main-account-gasto h2,
+    .main-account h2 {
+        width: 100%;
+        padding: 15px 15px;
+        text-align: left;
+    }
+
+    .nav-item {
+        margin: 20px auto;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .item-extracto {
+        width: 90%;
+        height: 100px;
+    }
+
+    .txt-input {
+        width: 90%;
+    }
+    
+    .lbl-main-account-ingreso {
+        width: 90%;
+    }
+    
+
+}
